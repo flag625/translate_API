@@ -22,8 +22,8 @@ from pandas import DataFrame
 def translate_e2z(text):
     """输入文档，调用有道翻译API，英译中，输出文档"""
     #API参数设置
-    appKey = '599f38e087d0d26c'
-    secretKey = 'Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76'
+    appKey = '599f38e087d0d26'
+    secretKey = 'Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L7'
     httpClient = None
     myurl = '/api'
     #q = ''
