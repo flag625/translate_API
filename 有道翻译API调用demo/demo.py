@@ -12,8 +12,8 @@ from urllib import error
 import random
 import json
 
-appKey = '599f38e087d0d26c'
-secretKey = 'Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76'
+appKey = '599f38e087d0d26'
+secretKey = 'Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L6'
 
 httpClient = None
 myurl = '/api'
