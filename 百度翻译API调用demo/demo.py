@@ -10,8 +10,8 @@ import urllib.error
 import random
 import json
 
-appid = '20151113000005349'
-secretKey = 'osubCEzlGjzvw8qdQc41'
+appid = '2015111300000534'
+secretKey = 'osubCEzlGjzvw8qdQc4'
 
  
 httpClient = None
