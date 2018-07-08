@@ -21,8 +21,8 @@ def translate_e2z(text):
     translated = ""
     doc = str(text).split(". ")
     for eachline in doc: #doc为一段文本
-        #appid = '20180520000163053'
-        #secreKey = 'rnE7cs0NwY9gQfNsTSZF'
+        #appid = '2018052000016305'
+        #secreKey = 'rnE7cs0NwY9gQfNsTSZ'
         appid = ''
         secreKey = ''
         myurl = '/api/trans/vip/translate'
