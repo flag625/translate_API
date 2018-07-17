@@ -29,14 +29,15 @@ class youdaofanyi:
     功能：执行完整的API调用翻译，返回翻译结果。
     """
 
-    def __init__(self,appKey,secretKey,httpConnection='openapi.youdao.com',
-                langFrom='auto',langTo='zh-CHS',):
+    def __init__(self,queryTest,appKey,secretKey,httpConnection='openapi.youdao.com',
+                langFrom='auto',langTo='zh-CHS'):
         self.myurl_youdao = '/api'  # 有道翻译url开头
         self.appKey = appKey  # 应用id
         self.secretKey = secretKey  # 应用密钥
         self.httpConnection = httpConnection  # 翻译API HTTP地址
         self.langFrom = langFrom  # 翻译前文字语言，默认为'auto',自动检查
         self.langTo = langTo  # 翻译后文字语言，默认为'auto',自动检查
+        self.queryTest = queryTest #带翻译文本
 
     def getUrlEncodedData(self, queryText):
         """
@@ -101,12 +102,20 @@ class youdaofanyi:
             print("Json load Error.")
             print(e)
 
+    def __call__(self):
+        myurl = self.getUrlEncodedData(self.querytext)
+        html = self.requestUrl(myurl)
+        result = self.parserHtml(html, self.querytext)
+        return result
+
+
+'''
     def translate(self,querytext):
         myurl = self.getUrlEncodedData(querytext)
         html = self.requestUrl(myurl)
         result = self.parserHtml(html,querytext)
         return result
-
+'''
 
 
 #test
