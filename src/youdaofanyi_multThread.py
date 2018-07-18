@@ -56,7 +56,7 @@ class youdaofanyi(object):
         myurl = self.myurl_youdao + '?appKey=' + self.appKey + '&q=' + parse.quote(
             queryTest) + '&from=' + self.langFrom + '&to=' + self.langTo + '&salt=' + str(
             salt) + '&sign=' + sign
-        print(myurl)
+        #print(myurl)
         return myurl
 
     def requestUrl(self,myurl):
@@ -109,7 +109,7 @@ class youdaofanyi(object):
         myurl = self.getUrlEncodedData(queryTest)
         html = self.requestUrl(myurl)
         result = self.parserHtml(html, queryTest)
-        print(result)
+        #print(result)
         return result
 
 
@@ -174,5 +174,5 @@ def example_fanyi():
 
 #test
 if __name__ == "__main__":
-    example_fanyi()
+    #example_fanyi()
 
