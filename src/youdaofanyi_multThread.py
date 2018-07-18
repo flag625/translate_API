@@ -9,6 +9,7 @@ import random
 import json
 import pandas as pd
 import threading
+from time import ctime
 
 class youdaofanyi(object):
     """
@@ -106,10 +107,12 @@ class youdaofanyi(object):
             print(e)
 
     def __call__(self, queryTest):
+        print("start: "+ctime())
         myurl = self.getUrlEncodedData(queryTest)
         html = self.requestUrl(myurl)
         result = self.parserHtml(html, queryTest)
-        #print(result)
+        print("End: "+ctime())
+        print(result)
         return result
 
 
@@ -174,5 +177,5 @@ def example_fanyi():
 
 #test
 if __name__ == "__main__":
-    #example_fanyi()
+    example_fanyi()
 
