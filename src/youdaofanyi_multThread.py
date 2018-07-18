@@ -1,9 +1,7 @@
 #!/urs/bin/env python
 # -*- coding: utf-8 -*-
 
-import http
 from http import client
-import urllib
 from urllib import parse
 from urllib import error
 import hashlib
@@ -71,6 +69,7 @@ class youdaofanyi(object):
             # response是HTTPResponse对象
             response = httpClient.getresponse()
             html = response.read().decode('utf-8')
+            #print('html: '+html)
             return html
         except error.HTTPError as e:
             print('The server couldn\'t fulfill the request.')
@@ -89,14 +88,16 @@ class youdaofanyi(object):
         :return: outStr，翻译结果
         """
         if not html:
-            print('html is empty.')
+            print("翻译失败：html is empty！")
         try:
             target = json.loads(html)
             key = u'translation'
             if key in target:
                 outStr = target["translation"][0]  # 取得翻译后的文本结果，测试可删除注释
+                print("翻译成功。")
             else:
                 outStr = queryTest  # 翻译失败，返回原文本
+                print("翻译失败，返回原文！")
             return outStr
         except Exception as e:
             print("Json load Error.")
@@ -120,7 +121,7 @@ class youdaofanyi(object):
 
 #test
 if __name__ == "__main__":
-    kwargs = {"appKey":"1",
+    kwargs = {"appKey":'1',
               "secretKey":"2"}
 
     f = youdaofanyi(**kwargs)
