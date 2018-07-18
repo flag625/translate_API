@@ -7,6 +7,7 @@ from urllib import error
 import hashlib
 import random
 import json
+import pandas as pd
 
 class youdaofanyi(object):
     """
@@ -117,6 +118,35 @@ class youdaofanyi(object):
         result = self.parserHtml(html,querytext)
         return result
 '''
+
+
+def Excel2queryText(path, split):
+    """
+    读取Excel内容，转化为dataframe，均分成几个小dataframe
+    :param path: Excel所在路径
+    :param split: 均分的数量
+    :return: 带有均分后的df的列表
+    """
+    try:
+        df = pd.read_excel(path) #读取Excel
+    except Exception as e:
+        print(e)
+    df['translated_AB'] = None
+    df_list = []
+    row_total = len(df)
+    if row_total <= split:
+        print("均分无效！")
+        return
+    if row_total%split != 0:
+        dif = int(row_total/(split-1))
+        for i in range(split-1):
+            df_list.append(df.iloc[(dif*i):dif*(i+1),])
+        df_list.append(df.iloc[(dif*(split-1)):,])
+    else:
+        dif = row_total/split
+        for i in range(split):
+            df_list.append(df.iloc[(dif*i):dif*(i+1),])
+
 
 
 #test
