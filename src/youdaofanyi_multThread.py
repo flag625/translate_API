@@ -8,6 +8,7 @@ import hashlib
 import random
 import json
 import pandas as pd
+import threading
 
 class youdaofanyi(object):
     """
@@ -149,10 +150,28 @@ def Excel2queryText(path, split):
 
 
 
+def example_fanyi():
+    kwargs = {"appKey":'599f38e087d0d26c',
+              "secretKey":"Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76"}
+    text = ["To the world you may be one person, but to one person you may be the world.",
+            "No man or woman is worth your tears, and the one who is, won't make you cry."]
+    fanyi = []
+    threads = []
+    for i in range(2):
+        f = youdaofanyi(**kwargs)
+        fanyi.append(f)
+
+    for i in range(2):
+        t = threading.Thread(target=fanyi[i](text[i]))
+        threads.append(t)
+
+    for i in range(2):
+        threads[i].start()
+
+    for i in range(2):
+        threads[i].join()
+
 #test
 if __name__ == "__main__":
-    kwargs = {"appKey":'1',
-              "secretKey":"2"}
+    example_fanyi()
 
-    f = youdaofanyi(**kwargs)
-    f('abd')
