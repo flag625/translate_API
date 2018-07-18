@@ -109,6 +109,7 @@ class youdaofanyi(object):
         myurl = self.getUrlEncodedData(queryTest)
         html = self.requestUrl(myurl)
         result = self.parserHtml(html, queryTest)
+        print(result)
         return result
 
 
