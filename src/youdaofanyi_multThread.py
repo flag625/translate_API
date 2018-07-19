@@ -207,7 +207,8 @@ def example_fanyi(df_list):
     for i in range(num):
         threads[i].join()
 
-    return [fanyi[i].df_res for i in range(num) ]
+    #return [fanyi[i].df_res for i in range(num)]
+    #只返回第一个，其余的没有返回。
 
 #test
 if __name__ == "__main__":
@@ -217,6 +218,6 @@ if __name__ == "__main__":
     #     print("Part %d :" %i)
     #     print(df)
     #     print('\n')
-    res_list = example_fanyi(df_list)
-    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
+    # res_list = example_fanyi(df_list)
+    # merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
 
