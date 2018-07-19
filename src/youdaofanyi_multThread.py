@@ -9,7 +9,7 @@ import random
 import json
 import pandas as pd
 import threading
-from time import ctime
+from time import ctime, sleep
 
 class youdaofanyi(object):
     """
@@ -121,7 +121,9 @@ class youdaofanyi(object):
                     result = self.parserHtml(html, doc)
                     df['translated_AB'][j] = result
                     print("Part %d row %d translate done." %(i,j))
+                    sleep(0.1)
             print("Part %d Done: %s" %(i,ctime()))
+            #print(df.iloc[:,5])
 
         self.df_res = df
         #print(result)
@@ -197,17 +199,17 @@ def example_fanyi(df_list):
         f = youdaofanyi(**kwargs)
         fanyi.append(f)
 
-    for i in range(num):
-        t = threading.Thread(target=fanyi[i](i, df_list[i]))
+    for i,f in enumerate(fanyi):
+        t = threading.Thread(target=f(i, df_list[i]))
         threads.append(t)
 
-    for i in range(num):
-        threads[i].start()
+    for t in threads:
+        t.start()
 
-    for i in range(num):
-        threads[i].join()
+    for t in threads:
+        t.join()
 
-    #return [fanyi[i].df_res for i in range(num)]
+    return [f.df_res for f in fanyi]
     #只返回第一个，其余的没有返回。
 
 #test
