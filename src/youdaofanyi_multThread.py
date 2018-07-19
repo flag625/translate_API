@@ -107,8 +107,8 @@ class youdaofanyi(object):
             print("Json load Error.")
             print(e)
 
-    def __call__(self, df):
-        if not df:
+    def __call__(self, i, df):
+        if df.empty:
             print("没有数据，返回原值！")
         else:
             print("Part %d begin to translate at %s" %(i,ctime()))
@@ -151,7 +151,7 @@ def Excel2queryText(path, split=1):
         print(e)
         raise e
 
-    if not df:
+    if df.empty:
         print("Excel 文本为空！")
         return
 
@@ -159,7 +159,7 @@ def Excel2queryText(path, split=1):
     df_list = []
     row_total = len(df)
 
-    if row_total <= split or split < 0:
+    if row_total < split or split < 0:
         print("均分数无效，执行默认值 1 ！")
         return Excel2queryText(path)
     else:
@@ -198,7 +198,7 @@ def example_fanyi(df_list):
         fanyi.append(f)
 
     for i in range(num):
-        t = threading.Thread(target=fanyi[i](df_list[i]))
+        t = threading.Thread(target=fanyi[i](i, df_list[i]))
         threads.append(t)
 
     for i in range(num):
@@ -212,11 +212,11 @@ def example_fanyi(df_list):
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    df_list = Excel2queryText('/Users/cloudin/PycharmProjects/translate_API/input/test.xlsx')
-    for i, df in enumerate(df_list):
-        print("Part %d :" %i)
-        print(df)
-        print('\n')
+    df_list = Excel2queryText('/Users/cloudin/PycharmProjects/translate_API/input/test.xlsx',3)
+    # for i, df in enumerate(df_list):
+    #     print("Part %d :" %i)
+    #     print(df)
+    #     print('\n')
     res_list = example_fanyi(df_list)
     merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
 
