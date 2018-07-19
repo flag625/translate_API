@@ -106,14 +106,19 @@ class youdaofanyi(object):
             print("Json load Error.")
             print(e)
 
-    def __call__(self, queryTest):
+    def __call__(self, df_list):
         print("start: "+ctime())
-        myurl = self.getUrlEncodedData(queryTest)
-        html = self.requestUrl(myurl)
-        result = self.parserHtml(html, queryTest)
-        print("End: "+ctime())
-        print(result)
-        return result
+        for i, df in enumerate(df_list):
+            df['translated'] = None
+            for j, doc in enumerate(df.iloc[:,5]):
+                myurl = self.getUrlEncodedData(doc)
+                html = self.requestUrl(myurl)
+                result = self.parserHtml(html, doc)
+                df['translated'][j] = result
+                print("Thread %d row %d translate done." %(i,j))
+        print("Thread %d Done: %s" %(i,ctime()))
+        #print(result)
+        #return result
 
 
 '''
@@ -151,6 +156,7 @@ def Excel2queryText(path, split):
         dif = row_total/split
         for i in range(split):
             df_list.append(df.iloc[(dif*i):dif*(i+1),])
+    return df_list
 
 
 
@@ -177,5 +183,5 @@ def example_fanyi():
 
 #test
 if __name__ == "__main__":
-    example_fanyi()
+    #example_fanyi()
 
