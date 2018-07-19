@@ -109,14 +109,14 @@ class youdaofanyi(object):
     def __call__(self, df_list):
         print("start: "+ctime())
         for i, df in enumerate(df_list):
-            df['translated'] = None
             for j, doc in enumerate(df.iloc[:,5]):
                 myurl = self.getUrlEncodedData(doc)
                 html = self.requestUrl(myurl)
                 result = self.parserHtml(html, doc)
-                df['translated'][j] = result
+                df['translated_AB'][j] = result
                 print("Thread %d row %d translate done." %(i,j))
         print("Thread %d Done: %s" %(i,ctime()))
+        return df_list
         #print(result)
         #return result
 
