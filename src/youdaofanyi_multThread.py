@@ -38,6 +38,7 @@ class youdaofanyi(object):
         self.httpConnection = httpConnection  # 翻译API HTTP地址
         self.langFrom = langFrom  # 翻译前文字语言，默认为'auto',自动检查
         self.langTo = langTo  # 翻译后文字语言，默认为'auto',自动检查
+        self.df_res = pd.DataFrame()
 
     def getUrlEncodedData(self, queryTest):
         """
@@ -106,28 +107,23 @@ class youdaofanyi(object):
             print("Json load Error.")
             print(e)
 
-    def __call__(self, df_list):
-        print("start: "+ctime())
-        if not df_list:
-            print("分块失败，没有待翻译文本！")
-            return
-        for i, df in enumerate(df_list):
-            if not df:
-                break
-            else:
-                print("Part %d begin to translate at %s" %(i,ctime()))
-                for j, doc in enumerate(df.iloc[:,5]):
-                    if not doc:
-                        break
-                    else:
-                        myurl = self.getUrlEncodedData(doc)
-                        html = self.requestUrl(myurl)
-                        result = self.parserHtml(html, doc)
-                        df['translated_AB'][j] = result
-                        print("Part %d row %d translate done." %(i,j))
-                print("Part %d Done: %s" %(i,ctime()))
+    def __call__(self, df):
+        if not df:
+            print("没有数据，返回原值！")
+        else:
+            print("Part %d begin to translate at %s" %(i,ctime()))
+            for j, doc in enumerate(df.iloc[:,5]):
+                if not doc:
+                    continue
+                else:
+                    myurl = self.getUrlEncodedData(doc)
+                    html = self.requestUrl(myurl)
+                    result = self.parserHtml(html, doc)
+                    df['translated_AB'][j] = result
+                    print("Part %d row %d translate done." %(i,j))
+            print("Part %d Done: %s" %(i,ctime()))
 
-        return df_list
+        self.df_res = df
         #print(result)
         #return result
 
@@ -189,26 +185,29 @@ def merge2Excel(path, df_list):
         print(e)
 
 #例子
-def example_fanyi():
+def example_fanyi(df_list):
     kwargs = {"appKey":'599f38e087d0d26c',
               "secretKey":"Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76"}
-    text = ["To the world you may be one person, but to one person you may be the world.",
-            "No man or woman is worth your tears, and the one who is, won't make you cry."]
+    #text = ["To the world you may be one person, but to one person you may be the world.",
+            #"No man or woman is worth your tears, and the one who is, won't make you cry."]
+    num = len(df_list)
     fanyi = []
     threads = []
-    for i in range(2):
+    for i in range(num):
         f = youdaofanyi(**kwargs)
         fanyi.append(f)
 
-    for i in range(2):
-        t = threading.Thread(target=fanyi[i](text[i]))
+    for i in range(num):
+        t = threading.Thread(target=fanyi[i](df_list[i]))
         threads.append(t)
 
-    for i in range(2):
+    for i in range(num):
         threads[i].start()
 
-    for i in range(2):
+    for i in range(num):
         threads[i].join()
+
+    return [fanyi[i].df_res for i in range(num) ]
 
 #test
 if __name__ == "__main__":
@@ -218,4 +217,6 @@ if __name__ == "__main__":
         print("Part %d :" %i)
         print(df)
         print('\n')
+    res_list = example_fanyi(df_list)
+    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
 

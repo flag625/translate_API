@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f1ca6eb-b7ce-4355-9221-8575110456dd" name="Default" comment="debug threading">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="youdaofanyi_multThread.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="219" column="19" lean-forward="true" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="19" />
+            <state relative-caret-position="437">
+              <caret line="210" lean-forward="true" selection-start-line="210" selection-end-line="210" />
               <folding>
                 <element signature="e#47#70#0" expanded="true" />
               </folding>
@@ -48,8 +49,8 @@
       <file leaf-file-name="multi_translate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/有道翻译API调用demo/multi_translate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="106" column="16" lean-forward="true" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
+            <state relative-caret-position="1615">
+              <caret line="106" column="16" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -124,97 +125,17 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
+              <item name="output" type="cbb8eebc:String" user="output" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
               <item name="src" type="cbb8eebc:String" user="src" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
               <item name="有道翻译API调用demo" type="cbb8eebc:String" user="有道翻译API调用demo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-              <item name="Versions" type="cbb8eebc:String" user="Versions" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-              <item name="Versions" type="cbb8eebc:String" user="Versions" />
-              <item name="3.7" type="cbb8eebc:String" user="3.7" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-              <item name="Versions" type="cbb8eebc:String" user="Versions" />
-              <item name="3.7" type="cbb8eebc:String" user="3.7" />
-              <item name="lib" type="cbb8eebc:String" user="lib" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-              <item name="Versions" type="cbb8eebc:String" user="Versions" />
-              <item name="3.7" type="cbb8eebc:String" user="3.7" />
-              <item name="lib" type="cbb8eebc:String" user="lib" />
-              <item name="python3.7" type="cbb8eebc:String" user="python3.7" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Library" type="cbb8eebc:String" user="Library" />
-              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
-              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
-              <item name="Versions" type="cbb8eebc:String" user="Versions" />
-              <item name="3.7" type="cbb8eebc:String" user="3.7" />
-              <item name="lib" type="cbb8eebc:String" user="lib" />
-              <item name="python3.7" type="cbb8eebc:String" user="python3.7" />
-              <item name="site-packages" type="cbb8eebc:String" user="site-packages" />
             </path>
           </expand>
           <select />
@@ -398,15 +319,15 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3251634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3251634" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4866828" visible="true" weight="0.226979" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4869281" visible="true" weight="0.23021002" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.51331717" side_tool="true" visible="true" weight="0.226979" />
+      <window_info id="Structure" order="1" sideWeight="0.5130719" side_tool="true" visible="true" weight="0.23021002" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398374" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -442,6 +363,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/translationAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2890">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+          <folding>
+            <element signature="e#42#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/有道翻译API调用demo/multi_translate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="219" column="19" lean-forward="true" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="19" />
+          <folding>
+            <element signature="e#47#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/translationAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
@@ -713,15 +661,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/有道翻译API调用demo/multi_translate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="106" column="16" lean-forward="true" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
+        <state relative-caret-position="1615">
+          <caret line="106" column="16" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="219" column="19" lean-forward="true" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="19" />
+        <state relative-caret-position="437">
+          <caret line="210" lean-forward="true" selection-start-line="210" selection-end-line="210" />
           <folding>
             <element signature="e#47#70#0" expanded="true" />
           </folding>
