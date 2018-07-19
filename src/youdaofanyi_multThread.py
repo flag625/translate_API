@@ -199,8 +199,8 @@ def example_fanyi(df_list):
         f = youdaofanyi(**kwargs)
         fanyi.append(f)
 
-    for i,f in enumerate(fanyi):
-        t = threading.Thread(target=f(i, df_list[i]))
+    for i, df in enumerate(df_list):
+        t = threading.Thread(target=fanyi[i](i, df))
         threads.append(t)
 
     for t in threads:
@@ -220,6 +220,6 @@ if __name__ == "__main__":
     #     print("Part %d :" %i)
     #     print(df)
     #     print('\n')
-    # res_list = example_fanyi(df_list)
-    # merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
+    res_list = example_fanyi(df_list)
+    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
 
