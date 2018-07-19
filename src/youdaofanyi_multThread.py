@@ -108,6 +108,9 @@ class youdaofanyi(object):
 
     def __call__(self, df_list):
         print("start: "+ctime())
+        if not df_list:
+            print("没有待翻译文本！")
+            return
         for i, df in enumerate(df_list):
             for j, doc in enumerate(df.iloc[:,5]):
                 myurl = self.getUrlEncodedData(doc)
@@ -130,34 +133,37 @@ class youdaofanyi(object):
 '''
 
 
-def Excel2queryText(path, split):
+def Excel2queryText(path, split=1):
     """
     读取Excel内容，转化为dataframe，均分成几个小dataframe
     :param path: Excel所在路径
     :param split: 均分的数量
     :return: 带有均分后的df的列表
     """
+    df = pd.DataFrame()
     try:
         df = pd.read_excel(path) #读取Excel
     except Exception as e:
         print(e)
+        raise e
     df['translated_AB'] = None
     df_list = []
     row_total = len(df)
-    if row_total <= split:
-        print("均分无效！")
-        return
-    if row_total%split != 0:
-        dif = int(row_total/(split-1))
-        for i in range(split-1):
-            df_list.append(df.iloc[(dif*i):dif*(i+1),])
-        df_list.append(df.iloc[(dif*(split-1)):,])
-    else:
-        dif = row_total/split
-        for i in range(split):
-            df_list.append(df.iloc[(dif*i):dif*(i+1),])
-    return df_list
 
+    if row_total <= split or split < 0:
+        print("均分数无效，执行默认值 1 ！")
+        return Excel2queryText(path)
+    else:
+        dif = int(row_total / split)
+        if row_total % split != 0:
+            for i in range(split - 1):
+                df_list.append(df.iloc[(dif * i):dif * (i + 1), :])
+            df_list.append(df.iloc[(dif * (split - 1)):, :])
+        else:
+            for i in range(split):
+                df_list.append(df.iloc[(dif * i):dif * (i + 1), :])
+
+        return df_list
 
 
 def example_fanyi():
@@ -184,5 +190,9 @@ def example_fanyi():
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    Excel2queryText(path, 2)
+    df_list = Excel2queryText('/Users/cloudin/PycharmProjects/translate_API/input/test.xlsx')
+    for i, df in enumerate(df_list):
+        print("Part %d :" %i)
+        print(df)
+        print('\n')
 
