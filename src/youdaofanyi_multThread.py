@@ -184,4 +184,5 @@ def example_fanyi():
 #test
 if __name__ == "__main__":
     #example_fanyi()
+    Excel2queryText(path, 2)
 
