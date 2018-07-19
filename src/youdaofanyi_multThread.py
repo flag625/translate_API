@@ -178,7 +178,7 @@ def Excel2queryText(path, split=1):
 
         return df_list
 
-
+#合并结果集
 def merge2Excel(path, df_list):
     if not df_list:
         print("没有 DataFrame 列表结果!")
@@ -188,6 +188,7 @@ def merge2Excel(path, df_list):
     except Exception as e:
         print(e)
 
+#例子
 def example_fanyi():
     kwargs = {"appKey":'599f38e087d0d26c',
               "secretKey":"Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76"}
