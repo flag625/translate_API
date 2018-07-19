@@ -109,16 +109,24 @@ class youdaofanyi(object):
     def __call__(self, df_list):
         print("start: "+ctime())
         if not df_list:
-            print("没有待翻译文本！")
+            print("分块失败，没有待翻译文本！")
             return
         for i, df in enumerate(df_list):
-            for j, doc in enumerate(df.iloc[:,5]):
-                myurl = self.getUrlEncodedData(doc)
-                html = self.requestUrl(myurl)
-                result = self.parserHtml(html, doc)
-                df['translated_AB'][j] = result
-                print("Thread %d row %d translate done." %(i,j))
-        print("Thread %d Done: %s" %(i,ctime()))
+            if not df:
+                break
+            else:
+                print("Part %d begin to translate at %s" %(i,ctime()))
+                for j, doc in enumerate(df.iloc[:,5]):
+                    if not doc:
+                        break
+                    else:
+                        myurl = self.getUrlEncodedData(doc)
+                        html = self.requestUrl(myurl)
+                        result = self.parserHtml(html, doc)
+                        df['translated_AB'][j] = result
+                        print("Part %d row %d translate done." %(i,j))
+                print("Part %d Done: %s" %(i,ctime()))
+
         return df_list
         #print(result)
         #return result
@@ -132,7 +140,7 @@ class youdaofanyi(object):
         return result
 '''
 
-
+#将Excel文档转化为queryText，同时实现分块。
 def Excel2queryText(path, split=1):
     """
     读取Excel内容，转化为dataframe，均分成几个小dataframe
@@ -146,6 +154,11 @@ def Excel2queryText(path, split=1):
     except Exception as e:
         print(e)
         raise e
+
+    if not df:
+        print("Excel 文本为空！")
+        return
+
     df['translated_AB'] = None
     df_list = []
     row_total = len(df)
@@ -165,6 +178,15 @@ def Excel2queryText(path, split=1):
 
         return df_list
 
+
+def merge2Excel(path, df_list):
+    if not df_list:
+        print("没有 DataFrame 列表结果!")
+    df = pd.concat(df_list)
+    try:
+        df.to_excel(path) #输出到Excel
+    except Exception as e:
+        print(e)
 
 def example_fanyi():
     kwargs = {"appKey":'599f38e087d0d26c',
