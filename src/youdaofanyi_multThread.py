@@ -8,6 +8,7 @@ import hashlib
 import random
 import json
 import pandas as pd
+import numpy as np
 import threading
 from time import ctime, sleep
 
@@ -113,17 +114,21 @@ class youdaofanyi(object):
         else:
             print("Part %d begin to translate at %s" %(i,ctime()))
             for j, doc in enumerate(df.iloc[:,5]):
-                if not doc:
+                if not isinstance(doc,str):
                     continue
                 else:
+                    #print("原文：%s" %doc)
                     myurl = self.getUrlEncodedData(doc)
+                    #print("myurl："+myurl)
                     html = self.requestUrl(myurl)
+                    #print("html："+html)
                     result = self.parserHtml(html, doc)
+                    #print("译文："+result)
                     df['translated_AB'][j] = result
                     print("Part %d row %d translate done." %(i,j))
                     sleep(0.1)
             print("Part %d Done: %s" %(i,ctime()))
-            #print(df.iloc[:,5])
+            #print(df.iloc[:,6])
 
         self.df_res = df
         #print(result)
@@ -168,11 +173,14 @@ def Excel2queryText(path, split=1):
         dif = int(row_total / split)
         if row_total % split != 0:
             for i in range(split - 1):
-                df_list.append(df.iloc[(dif * i):dif * (i + 1), :])
-            df_list.append(df.iloc[(dif * (split - 1)):, :])
+                df_p = df.iloc[(dif * i):dif * (i + 1), :].reset_index(drop=True)
+                df_list.append(df_p)
+            df_l = df.iloc[(dif * (split - 1)):, :].reset_index(drop=True)
+            df_list.append(df_l)
         else:
             for i in range(split):
-                df_list.append(df.iloc[(dif * i):dif * (i + 1), :])
+                df_p = df.iloc[(dif * i):dif * (i + 1), :].reset_index(drop=True)
+                df_list.append(df_p)
 
         return df_list
 
@@ -188,8 +196,8 @@ def merge2Excel(path, df_list):
 
 #例子
 def example_fanyi(df_list):
-    kwargs = {"appKey":'599f38e087d0d26c',
-              "secretKey":"Nn6nV6t5kdKvLO4fvS1PJI0lLCze6L76"}
+    kwargs = {"appKey":'apiID',
+              "secretKey":"密码"}
     #text = ["To the world you may be one person, but to one person you may be the world.",
             #"No man or woman is worth your tears, and the one who is, won't make you cry."]
     num = len(df_list)
@@ -216,10 +224,10 @@ def example_fanyi(df_list):
 if __name__ == "__main__":
     #example_fanyi()
     df_list = Excel2queryText('/Users/cloudin/PycharmProjects/translate_API/input/test.xlsx',3)
+    res_list = example_fanyi(df_list)
+    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
     # for i, df in enumerate(df_list):
     #     print("Part %d :" %i)
     #     print(df)
     #     print('\n')
-    res_list = example_fanyi(df_list)
-    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
 
