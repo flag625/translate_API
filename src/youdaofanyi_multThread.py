@@ -223,9 +223,9 @@ def example_fanyi(df_list):
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    df_list = Excel2queryText('/Users/cloudin/PycharmProjects/translate_API/input/test.xlsx',3)
+    df_list = Excel2queryText('your Excel path',3)
     res_list = example_fanyi(df_list)
-    merge2Excel('/Users/cloudin/PycharmProjects/translate_API/output/test20180718.xlsx',res_list)
+    merge2Excel('your save file',res_list)
     # for i, df in enumerate(df_list):
     #     print("Part %d :" %i)
     #     print(df)

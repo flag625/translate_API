@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f1ca6eb-b7ce-4355-9221-8575110456dd" name="Default" comment="debug threading">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test20180718.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/test20180718.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/~$test20180718.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="youdaofanyi_multThread.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="196" column="3" lean-forward="true" selection-start-line="196" selection-start-column="3" selection-end-line="196" selection-end-column="3" />
+            <state relative-caret-position="201">
+              <caret line="226" column="37" lean-forward="true" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
               <folding>
                 <element signature="e#47#70#0" expanded="true" />
               </folding>
@@ -111,22 +108,17 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
-              <item name="input" type="cbb8eebc:String" user="input" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
-              <item name="output" type="cbb8eebc:String" user="output" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
               <item name="src" type="cbb8eebc:String" user="src" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
               <item name="有道翻译API调用demo" type="cbb8eebc:String" user="有道翻译API调用demo" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="translate_API" type="cbb8eebc:String" user="translate_API" />
+              <item name="百度翻译API调用demo" type="cbb8eebc:String" user="百度翻译API调用demo" />
             </path>
           </expand>
           <select />
@@ -734,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="196" column="3" lean-forward="true" selection-start-line="196" selection-start-column="3" selection-end-line="196" selection-end-column="3" />
+        <state relative-caret-position="201">
+          <caret line="226" column="37" lean-forward="true" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
           <folding>
             <element signature="e#47#70#0" expanded="true" />
           </folding>
