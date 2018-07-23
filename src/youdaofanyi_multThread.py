@@ -113,7 +113,7 @@ class youdaofanyi(object):
             print("没有数据，返回原值！")
         else:
             print("Part %d begin to translate at %s" %(i,ctime()))
-            for j, doc in enumerate(df.iloc[:,5]):
+            for j, doc in enumerate(df.iloc[:,4]):
                 if not isinstance(doc,str):
                     continue
                 else:
@@ -196,15 +196,20 @@ def merge2Excel(path, df_list):
 
 #例子
 def example_fanyi(df_list):
-    kwargs = {"appKey":'apiID',
-              "secretKey":"密码"}
+    list_kwargs = [{"appKey":'599f38e087d0d26clzs',
+                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfzlzs"},
+                   {"appKey":'599f38e087d0d26clzs',
+                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfzlzs"},
+                   {"appKey": '6b3f4ae4c5e19b88lzs',
+                    "secretKey": "imR2rjeoEBlkzt9g4ZCqOwofXS6RNeo1lzs"}
+                   ]
     #text = ["To the world you may be one person, but to one person you may be the world.",
             #"No man or woman is worth your tears, and the one who is, won't make you cry."]
     num = len(df_list)
     fanyi = []
     threads = []
     for i in range(num):
-        f = youdaofanyi(**kwargs)
+        f = youdaofanyi(**list_kwargs[i])
         fanyi.append(f)
 
     for i, df in enumerate(df_list):
@@ -223,9 +228,9 @@ def example_fanyi(df_list):
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    df_list = Excel2queryText('your Excel path',3)
+    df_list = Excel2queryText('your path.xlsx',3)
     res_list = example_fanyi(df_list)
-    merge2Excel('your save file',res_list)
+    merge2Excel('your save path .xlsx',res_list)
     # for i, df in enumerate(df_list):
     #     print("Part %d :" %i)
     #     print(df)
