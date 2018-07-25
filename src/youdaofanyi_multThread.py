@@ -108,12 +108,12 @@ class youdaofanyi(object):
             print("Json load Error.")
             print(e)
 
-    def __call__(self, i, df):
+    def __call__(self, i, df, col):
         if df.empty:
             print("没有数据，返回原值！")
         else:
             print("Part %d begin to translate at %s" %(i,ctime()))
-            for j, doc in enumerate(df.iloc[:,4]):
+            for j, doc in enumerate(df.iloc[:,col]):
                 if not isinstance(doc,str):
                     continue
                 else:
@@ -194,14 +194,14 @@ def merge2Excel(path, df_list):
     except Exception as e:
         print(e)
 
-#例子
-def example_fanyi(df_list):
-    list_kwargs = [{"appKey":'599f38e087d0d26clzs',
-                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfzlzs"},
-                   {"appKey":'599f38e087d0d26clzs',
-                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfzlzs"},
-                   {"appKey": '6b3f4ae4c5e19b88lzs',
-                    "secretKey": "imR2rjeoEBlkzt9g4ZCqOwofXS6RNeo1lzs"}
+#Excel翻译
+def excel_fanyi(df_list):
+    list_kwargs = [{"appKey":'599f38e087d0d26c',
+                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfz"},
+                   {"appKey":'599f38e087d0d26c',
+                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfz"},
+                   {"appKey": '6b3f4ae4c5e19b88',
+                    "secretKey": "imR2rjeoEBlkzt9g4ZCqOwofXS6RNeo1"}
                    ]
     #text = ["To the world you may be one person, but to one person you may be the world.",
             #"No man or woman is worth your tears, and the one who is, won't make you cry."]
@@ -213,7 +213,7 @@ def example_fanyi(df_list):
         fanyi.append(f)
 
     for i, df in enumerate(df_list):
-        t = threading.Thread(target=fanyi[i](i, df))
+        t = threading.Thread(target=fanyi[i](i, df, 4))
         threads.append(t)
 
     for t in threads:
@@ -228,9 +228,9 @@ def example_fanyi(df_list):
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    df_list = Excel2queryText('your path.xlsx',3)
-    res_list = example_fanyi(df_list)
-    merge2Excel('your save path .xlsx',res_list)
+    df_list = Excel2queryText('/Users/cloudin/Documents/剩余.xlsx',2)
+    res_list = excel_fanyi(df_list)
+    merge2Excel('/Users/cloudin/Documents/RE剩余.xlsx',res_list)
     # for i, df in enumerate(df_list):
     #     print("Part %d :" %i)
     #     print(df)
