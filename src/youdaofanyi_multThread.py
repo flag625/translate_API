@@ -196,6 +196,7 @@ def merge2Excel(path, df_list):
 
 #Excel翻译
 def excel_fanyi(df_list):
+    #尝试使用config
     list_kwargs = [{"appKey":'599f38e087d0d26c',
                     "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfz"},
                    {"appKey":'599f38e087d0d26c',
