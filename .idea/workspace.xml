@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f1ca6eb-b7ce-4355-9221-8575110456dd" name="Default" comment="debug threading">
-      <change beforePath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/youdaofanyi_multThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +18,7 @@
     <SUITE FILE_PATH="coverage/Multi_translate$demo.coverage" NAME="demo Coverage Results" MODIFIED="1527176569689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/有道翻译API调用demo" />
     <SUITE FILE_PATH="coverage/Multi_translate$multi_translate.coverage" NAME="multi_translate Coverage Results" MODIFIED="1526872910029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Multi_translate$translationAPI.coverage" NAME="translationAPI Coverage Results" MODIFIED="1527215033594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/translate_API$youdaofanyi_multThread.coverage" NAME="youdaofanyi_multThread Coverage Results" MODIFIED="1532417833016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/translate_API$youdaofanyi_multThread.coverage" NAME="youdaofanyi_multThread Coverage Results" MODIFIED="1532493122052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -36,8 +37,8 @@
       <file leaf-file-name="youdaofanyi_multThread.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="187" column="27" lean-forward="true" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+            <state relative-caret-position="293">
+              <caret line="229" column="26" lean-forward="true" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
               <folding>
                 <element signature="e#47#70#0" expanded="true" />
               </folding>
@@ -48,8 +49,8 @@
       <file leaf-file-name="multi_translate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/有道翻译API调用demo/multi_translate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="106" column="16" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
+            <state relative-caret-position="392">
+              <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -317,11 +318,11 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3251634" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47712418" visible="true" weight="0.25201938" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47549018" visible="true" weight="0.25605816" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.52287585" side_tool="true" visible="true" weight="0.25201938" />
+      <window_info id="Structure" order="1" sideWeight="0.5245098" side_tool="true" visible="true" weight="0.25605816" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -357,16 +358,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="198" column="33" lean-forward="true" selection-start-line="198" selection-start-column="33" selection-end-line="198" selection-end-column="33" />
-          <folding>
-            <element signature="e#47#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/translationAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
@@ -719,15 +710,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/有道翻译API调用demo/multi_translate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="106" column="16" selection-start-line="103" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
+        <state relative-caret-position="392">
+          <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="187" column="27" lean-forward="true" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+        <state relative-caret-position="293">
+          <caret line="229" column="26" lean-forward="true" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
           <folding>
             <element signature="e#47#70#0" expanded="true" />
           </folding>
