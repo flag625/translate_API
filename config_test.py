@@ -4,11 +4,8 @@ import random
 import hashlib
 from urllib import parse
 
-try:
-    config = configparser.ConfigParser()
-    config.read('/Users/cloudin/PycharmProjects/translate_API/api.conf')
-except Exception as e:
-    raise e
+config = configparser.ConfigParser()
+config.read("/Users/cloudin/PycharmProjects/translate_API/api.ini")
 
 
 def getUrlEncodedData(queryTest):
@@ -20,9 +17,9 @@ def getUrlEncodedData(queryTest):
 
 
     appKey = config.get('youdaoLZX_config', 'appKey')
-    print(appKey)
-    secretKey = config.get('youdaoLZX_config', 'appKey')
-    print(secretKey)
+    #print(appKey)
+    secretKey = config.get('youdaoLZX_config', 'secretKey')
+    #print(secretKey)
 
 
     if not isinstance(queryTest, str):
@@ -40,5 +37,5 @@ def getUrlEncodedData(queryTest):
     print(myurl)
     #return myurl
 
-    if __name__ == '__main__':
-        getUrlEncodedData('a')
+if __name__ == "__main__":
+    getUrlEncodedData('a')
