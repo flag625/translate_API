@@ -5,7 +5,7 @@ import hashlib
 from urllib import parse
 
 config = configparser.ConfigParser()
-config.read("/Users/cloudin/PycharmProjects/translate_API/api.ini")
+config.read('/Users/cloudin/PycharmProjects/translate_API/api.ini')
 
 
 def getUrlEncodedData(queryTest):
@@ -37,5 +37,17 @@ def getUrlEncodedData(queryTest):
     print(myurl)
     #return myurl
 
+def setup_client(conf):
+    client_1 = {'appKey':conf.get('youdaoLZX_config', 'appKey'),
+              'secretKey':conf.get('youdaoLZX_config', 'secretKey')}
+    client_2 = {'appKey':conf.get('youdaoLZX_config', 'appKey'),
+              'secretKeyy':conf.get('youdaoLZX_config', 'secretKey')}
+    client_3 = {'appKey':conf.get('youdaoLDY_config', 'appKey'),
+              'secretKey':conf.get('youdaoLDY_config', 'secretKey')}
+    list_kwargs = [client_1, client_2, client_3]
+    return list_kwargs
+
+
 if __name__ == "__main__":
     getUrlEncodedData('a')
+    print(setup_client(config))

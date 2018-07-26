@@ -11,6 +11,10 @@ import pandas as pd
 import numpy as np
 import threading
 from time import ctime, sleep
+import configparser
+
+conf = configparser.ConfigParser()
+conf.read('/Users/cloudin/PycharmProjects/translate_API/api.ini')
 
 class youdaofanyi(object):
     """
@@ -142,6 +146,17 @@ class youdaofanyi(object):
         result = self.parserHtml(html,querytext)
         return result
 '''
+#设定api账号
+def setup_client(conf):
+    client_1 = {'appKey':conf.get('youdaoLZX_config', 'appKey'),
+              'secretKey':conf.get('youdaoLZX_config', 'secretKey')}
+    client_2 = {'appKey':conf.get('youdaoLZX_config', 'appKey'),
+              'secretKey':conf.get('youdaoLZX_config', 'secretKey')}
+    client_3 = {'appKey':conf.get('youdaoLDY_config', 'appKey'),
+              'secretKey':conf.get('youdaoLDY_config', 'secretKey')}
+    list_kwargs = [client_1, client_2, client_3]
+    return list_kwargs
+
 
 #将Excel文档转化为queryText，同时实现分块。
 def Excel2queryText(path, split=1):
@@ -184,33 +199,13 @@ def Excel2queryText(path, split=1):
 
         return df_list
 
-#合并结果集
-def merge2Excel(path, df_list):
-    if not df_list:
-        print("没有 DataFrame 列表结果!")
-    df = pd.concat(df_list)
-    try:
-        df.to_excel(path) #输出到Excel
-    except Exception as e:
-        print(e)
-
 #Excel翻译
 def excel_fanyi(df_list):
-    #尝试使用config
-    list_kwargs = [{"appKey":'599f38e087d0d26c',
-                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfz"},
-                   {"appKey":'599f38e087d0d26c',
-                    "secretKey":"ocoz9oWtLJ97YC4uEB93Gk2TIZgbGSfz"},
-                   {"appKey": '6b3f4ae4c5e19b88',
-                    "secretKey": "imR2rjeoEBlkzt9g4ZCqOwofXS6RNeo1"}
-                   ]
-    #text = ["To the world you may be one person, but to one person you may be the world.",
-            #"No man or woman is worth your tears, and the one who is, won't make you cry."]
     num = len(df_list)
     fanyi = []
     threads = []
     for i in range(num):
-        f = youdaofanyi(**list_kwargs[i])
+        f = youdaofanyi(**setup_client(conf)[i])
         fanyi.append(f)
 
     for i, df in enumerate(df_list):
@@ -226,12 +221,23 @@ def excel_fanyi(df_list):
     return [f.df_res for f in fanyi]
     #只返回第一个，其余的没有返回。
 
+
+#合并结果集
+def merge2Excel(path, df_list):
+    if not df_list:
+        print("没有 DataFrame 列表结果!")
+    df = pd.concat(df_list)
+    try:
+        df.to_excel(path) #输出到Excel
+    except Exception as e:
+        print(e)
+
 #test
 if __name__ == "__main__":
     #example_fanyi()
-    df_list = Excel2queryText('/Users/cloudin/Documents/剩余.xlsx',2)
+    df_list = Excel2queryText('/Users/cloudin/Documents/test.xlsx',3)
     res_list = excel_fanyi(df_list)
-    merge2Excel('/Users/cloudin/Documents/RE剩余.xlsx',res_list)
+    merge2Excel('/Users/cloudin/Documents/REtest.xlsx',res_list)
     # for i, df in enumerate(df_list):
     #     print("Part %d :" %i)
     #     print(df)
