@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f1ca6eb-b7ce-4355-9221-8575110456dd" name="Default" comment="requirements">
-      <change beforePath="$PROJECT_DIR$/api.conf" beforeDir="false" afterPath="$PROJECT_DIR$/api.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,24 +19,24 @@
     <SUITE FILE_PATH="coverage/Multi_translate$multi_translate.coverage" NAME="multi_translate Coverage Results" MODIFIED="1526872910029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Multi_translate$translationAPI.coverage" NAME="translationAPI Coverage Results" MODIFIED="1527215033594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/translate_API$youdaofanyi_multThread.coverage" NAME="youdaofanyi_multThread Coverage Results" MODIFIED="1532493122052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/translate_API$config_test.coverage" NAME="config_test Coverage Results" MODIFIED="1532585162269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/translate_API$config_test.coverage" NAME="config_test Coverage Results" MODIFIED="1532595412237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="youdaofanyi_multThread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state>
               <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="123">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -44,20 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="34">
+              <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -85,8 +76,8 @@
         <option value="$PROJECT_DIR$/src/translationAPI.py" />
         <option value="$PROJECT_DIR$/src/youdaofanyi_multThread.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/config_test.py" />
         <option value="$PROJECT_DIR$/api.conf" />
+        <option value="$PROJECT_DIR$/config_test.py" />
       </list>
     </option>
   </component>
@@ -99,11 +90,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="29" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="9" />
+    <option name="y" value="23" />
+    <option name="width" value="1258" />
+    <option name="height" value="678" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
@@ -130,22 +121,77 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
               <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
               <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="cloudin" type="cbb8eebc:String" user="cloudin" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
               <item name="/" type="cbb8eebc:String" user="/" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="cloudin" type="cbb8eebc:String" user="cloudin" />
-              <item name="Documents" type="cbb8eebc:String" user="Documents" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="/" type="cbb8eebc:String" user="/" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+              <item name="Versions" type="cbb8eebc:String" user="Versions" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="/" type="cbb8eebc:String" user="/" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+              <item name="Versions" type="cbb8eebc:String" user="Versions" />
+              <item name="3.7" type="cbb8eebc:String" user="3.7" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="/" type="cbb8eebc:String" user="/" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+              <item name="Versions" type="cbb8eebc:String" user="Versions" />
+              <item name="3.7" type="cbb8eebc:String" user="3.7" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="/" type="cbb8eebc:String" user="/" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+              <item name="Versions" type="cbb8eebc:String" user="Versions" />
+              <item name="3.7" type="cbb8eebc:String" user="3.7" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
+              <item name="python3.7" type="cbb8eebc:String" user="python3.7" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="/" type="cbb8eebc:String" user="/" />
+              <item name="Library" type="cbb8eebc:String" user="Library" />
+              <item name="Frameworks" type="cbb8eebc:String" user="Frameworks" />
+              <item name="Python.framework" type="cbb8eebc:String" user="Python.framework" />
+              <item name="Versions" type="cbb8eebc:String" user="Versions" />
+              <item name="3.7" type="cbb8eebc:String" user="3.7" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
+              <item name="python3.7" type="cbb8eebc:String" user="python3.7" />
+              <item name="site-packages" type="cbb8eebc:String" user="site-packages" />
             </path>
           </expand>
           <select />
@@ -373,23 +419,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="118" width="1280" height="709" extended-state="0" />
+    <frame x="3" y="30" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.3970588" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5024233" side_tool="true" visible="true" weight="0.3970588" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.3251634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.67689824" weight="0.3251634" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46612465" visible="true" weight="0.26817447" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46341464" visible="true" weight="0.27221325" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49919224" weight="0.32843137" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.53387535" side_tool="true" visible="true" weight="0.26817447" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49919224" visible="true" weight="0.3970588" />
+      <window_info id="Structure" order="1" sideWeight="0.5365854" side_tool="true" visible="true" weight="0.27221325" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49757674" visible="true" weight="0.3970588" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,6 +443,7 @@
       <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49919224" weight="0.32843137" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,9 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -466,9 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,9 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -514,9 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -531,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,9 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
           <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,9 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2788">
           <caret line="164" column="25" selection-start-line="159" selection-start-column="4" selection-end-line="164" selection-end-column="25" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,9 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2788">
           <caret line="164" column="25" lean-forward="true" selection-start-line="159" selection-start-column="4" selection-end-line="164" selection-end-column="25" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,22 +625,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/translationAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/translationAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/百度翻译API调用demo/multi_translate.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -631,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3740">
           <caret line="177" column="37" selection-start-line="177" selection-start-column="37" selection-end-line="177" selection-end-column="37" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/百度翻译API调用demo/multi_translate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -734,25 +731,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/youdaofanyi_multThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state>
           <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_test.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

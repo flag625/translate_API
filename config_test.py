@@ -2,10 +2,13 @@
 import configparser
 import random
 import hashlib
-
-config = configparser.ConfigParser()
-config.read('/Users/cloudin/PycharmProjects/translate_API/api.conf')
 from urllib import parse
+
+try:
+    config = configparser.ConfigParser()
+    config.read('/Users/cloudin/PycharmProjects/translate_API/api.conf')
+except Exception as e:
+    raise e
 
 
 def getUrlEncodedData(queryTest):
@@ -15,13 +18,11 @@ def getUrlEncodedData(queryTest):
             :return: myurl，url编码过的数据
     """
 
-    try:
-        appKey = config.get('youdaoLZX_config', 'appKey')
-        print(appKey)
-        secretKey = config.get('youdaoLZX_config', 'appKey')
-        print(secretKey)
-    except Exception as e:
-        raise e
+
+    appKey = config.get('youdaoLZX_config', 'appKey')
+    print(appKey)
+    secretKey = config.get('youdaoLZX_config', 'appKey')
+    print(secretKey)
 
 
     if not isinstance(queryTest, str):
