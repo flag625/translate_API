@@ -25,7 +25,7 @@ numpy==1.14.3
 openpyxl==2.5.4
 pandas==0.23.0
 pefile==2017.11.5
-psutil==5.4.6
+psutil==5.6.6
 PyDispatcher==2.0.5
 PyHamcrest==1.9.0
 PyInstaller==3.3.1
