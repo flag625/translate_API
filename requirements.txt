@@ -35,7 +35,7 @@ python-crontab==2.3.4
 python-dateutil==2.7.3
 pytz==2018.4
 pyusb==1.0.2
-PyYAML==3.13
+PyYAML==5.4
 requests==2.19.1
 serial==0.0.66
 six==1.11.0
