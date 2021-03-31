@@ -18,7 +18,7 @@ idna==2.7
 incremental==17.5.0
 iso8601==0.1.12
 jdcal==1.4
-lxml==4.2.3
+lxml==4.6.3
 macholib==1.9
 mysql-connector==2.1.4
 numpy==1.14.3
